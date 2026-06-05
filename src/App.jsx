@@ -44,6 +44,39 @@ const ACTS = [
   { id: "outro", label: "OUTRO", time: "16:30–17:00", domain: null },
 ];
 
+const MANIFESTO = {
+  "title": "DEF4US'28 UNIFIED MANIFESTO",
+  "author": "Damien Edward Featherstone",
+  "modules": [
+    {
+      "id": "MODULE 01",
+      "title": "THE FAMILY COURT PROTECTION ACT",
+      "content": "A Special Federal Family Court where judges are legally required to ensure pro se parents fully understand their rights. No relinquishment valid unless signed 72 hours prior before an independent notary and two neutral witnesses. No child may be held under a fictitious name.",
+      "case": "Case No. 2020-JC-000046"
+    },
+    {
+      "id": "MODULE 02",
+      "title": "THE AMERICAN LEARNING LIBERATION ACT",
+      "content": "American Learning Liberation Compounds: Artisan Mastery, Trade Mastery, and Autodidactic Learning Centers under one roof. Mastery-based progression, mentored, not standardized."
+    },
+    {
+      "id": "MODULE 03",
+      "title": "THE TREASURY TRANSPARENCY BLOCKCHAIN INITIATIVE",
+      "content": "A United States Digital Dollar (TTT) pegged 1:1 with the physical dollar on a public immutable blockchain ledger. Every transaction permanently and publicly recorded in real time."
+    },
+    {
+      "id": "MODULE 04",
+      "title": "THE UNIVERSAL DIGNITY STIPEND",
+      "content": "A monthly payment in TTT delivered directly to the digital wallet of every registered American. No means-testing, no gatekeeping. Tethered to baseline caloric and shelter costs."
+    },
+    {
+      "id": "MODULE 05",
+      "title": "THE RIGHTS OF THE RESIDENTIALLY CHALLENGED ACT",
+      "content": "Deeded Housing: Repurposing underutilized federal land and buildings into permanent modular residential property. Assets deeded directly to the person, non-lienable."
+    }
+  ]
+};
+
 const SCENES = [
   {
     id: "earth_5r", act: "cold-open", pg: null,
@@ -500,11 +533,12 @@ const SignalNoise = () => (
 
 export default function App() {
   const [phase, setPhase] = useState("intercept"); 
-  // phases: intercept | transmission | comic | debrief | aware | pitch
+  // phases: intercept | transmission | comic | debrief | aware | pitch | manifesto
   const [sceneIdx, setSceneIdx] = useState(0);
   const [dialogueIdx, setDialogueIdx] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarTab, setSidebarTab] = useState("INDEX");
+  const [manifestoModule, setManifestoModule] = useState(0);
   const [indexDomain, setIndexDomain] = useState("LEGAL");
   const [awareChosen, setAwareChosen] = useState(false);
   const [showPitch, setShowPitch] = useState(false);
@@ -721,7 +755,11 @@ export default function App() {
             </div>
           )}
         </div>
-      </div>
+      
+        <div style={{ position: "fixed", bottom: 10, right: 10, zIndex: 1000, pointerEvents: "none", opacity: 0.3, fontFamily: "'Share Tech Mono', monospace", fontSize: "0.5rem", color: "#8b0000" }}>
+          CASE NO. 2020-JC-000046 | DEF4US'28
+        </div>
+    </div>
     </>
   );
 
@@ -821,7 +859,11 @@ export default function App() {
             ▸ EXPERIENCE THE ARTIFACT
           </button>
         </div>
-      </div>
+      
+        <div style={{ position: "fixed", bottom: 10, right: 10, zIndex: 1000, pointerEvents: "none", opacity: 0.3, fontFamily: "'Share Tech Mono', monospace", fontSize: "0.5rem", color: "#8b0000" }}>
+          CASE NO. 2020-JC-000046 | DEF4US'28
+        </div>
+    </div>
     </>
   );
 
@@ -901,7 +943,11 @@ export default function App() {
             </div>
           ) : null}
         </div>
-      </div>
+      
+        <div style={{ position: "fixed", bottom: 10, right: 10, zIndex: 1000, pointerEvents: "none", opacity: 0.3, fontFamily: "'Share Tech Mono', monospace", fontSize: "0.5rem", color: "#8b0000" }}>
+          CASE NO. 2020-JC-000046 | DEF4US'28
+        </div>
+    </div>
     </>
   );
 
@@ -960,7 +1006,11 @@ export default function App() {
             </button>
           </div>
         </div>
-      </div>
+      
+        <div style={{ position: "fixed", bottom: 10, right: 10, zIndex: 1000, pointerEvents: "none", opacity: 0.3, fontFamily: "'Share Tech Mono', monospace", fontSize: "0.5rem", color: "#8b0000" }}>
+          CASE NO. 2020-JC-000046 | DEF4US'28
+        </div>
+    </div>
     </>
   );
 
@@ -1312,7 +1362,56 @@ export default function App() {
                   </div>
                 )}
 
-                {sidebarTab === "BIBLE" && (
+                
+          {sidebarTab === "MANIFESTO" && (
+            <div className="fade-in" style={{ padding: 20 }}>
+              <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1.2rem", fontWeight: 700, color: "#8b0000", marginBottom: 4 }}>{MANIFESTO.title}</div>
+              <div style={{ fontSize: "0.6rem", color: "#666", letterSpacing: "0.1em", marginBottom: 20 }}>BY {MANIFESTO.author}</div>
+              
+              {MANIFESTO.modules.map((m, idx) => (
+                <div key={m.id} style={{ marginBottom: 24, borderLeft: "2px solid #8b000044", paddingLeft: 12 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+                    <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.6rem", color: "#8b0000" }}>{m.id}</span>
+                    {m.case && <span style={{ fontSize: "0.5rem", color: "#444" }}>{m.case}</span>}
+                  </div>
+                  <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "0.8rem", color: "#e8dcc8", margin: "4px 0" }}>{m.title}</div>
+                  <div style={{ fontSize: "0.7rem", lineHeight: 1.5, color: "#888" }}>{m.content}</div>
+                </div>
+              ))}
+              
+              <div style={{ marginTop: 40, padding: 16, border: "1px dashed #333", textAlign: "center" }}>
+                <div style={{ fontSize: "0.6rem", color: "#c8860a", letterSpacing: "0.1em", marginBottom: 8 }}>2028 PRESIDENTIAL CAMPAIGN HQ</div>
+                <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "0.9rem", color: "#e8dcc8" }}>MAKE HER HONEST AGAIN</div>
+              </div>
+            </div>
+          )}
+    
+          {sidebarTab === "BIBLE" && (
+                
+          {sidebarTab === "MANIFESTO" && (
+            <div className="fade-in" style={{ padding: 20 }}>
+              <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1.2rem", fontWeight: 700, color: "#8b0000", marginBottom: 4 }}>{MANIFESTO.title}</div>
+              <div style={{ fontSize: "0.6rem", color: "#666", letterSpacing: "0.1em", marginBottom: 20 }}>BY {MANIFESTO.author}</div>
+              
+              {MANIFESTO.modules.map((m, idx) => (
+                <div key={m.id} style={{ marginBottom: 24, borderLeft: "2px solid #8b000044", paddingLeft: 12 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+                    <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.6rem", color: "#8b0000" }}>{m.id}</span>
+                    {m.case && <span style={{ fontSize: "0.5rem", color: "#444" }}>{m.case}</span>}
+                  </div>
+                  <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "0.8rem", color: "#e8dcc8", margin: "4px 0" }}>{m.title}</div>
+                  <div style={{ fontSize: "0.7rem", lineHeight: 1.5, color: "#888" }}>{m.content}</div>
+                </div>
+              ))}
+              
+              <div style={{ marginTop: 40, padding: 16, border: "1px dashed #333", textAlign: "center" }}>
+                <div style={{ fontSize: "0.6rem", color: "#c8860a", letterSpacing: "0.1em", marginBottom: 8 }}>2028 PRESIDENTIAL CAMPAIGN HQ</div>
+                <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "0.9rem", color: "#e8dcc8" }}>MAKE HER HONEST AGAIN</div>
+              </div>
+            </div>
+          )}
+    
+          {sidebarTab === "BIBLE" && (
                   <div style={{ fontSize: "0.72rem", color: "#888", lineHeight: 1.6 }}>
                     {[
                       { head: "OBJECT CLASS", body: "EUCLID (THAUMIEL RECLASSIFICATION PENDING)" },
@@ -1338,7 +1437,11 @@ export default function App() {
             </div>
           )}
         </div>
-      </div>
+      
+        <div style={{ position: "fixed", bottom: 10, right: 10, zIndex: 1000, pointerEvents: "none", opacity: 0.3, fontFamily: "'Share Tech Mono', monospace", fontSize: "0.5rem", color: "#8b0000" }}>
+          CASE NO. 2020-JC-000046 | DEF4US'28
+        </div>
+    </div>
     </>
   );
 }
