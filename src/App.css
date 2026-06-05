@@ -1,3 +1,63 @@
+.comic-viewer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.comic-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.comic-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: 2px solid var(--accent);
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.page-counter {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-h);
+  text-align: center;
+  width: 100%;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
