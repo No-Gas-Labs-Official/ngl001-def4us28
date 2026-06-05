@@ -1381,13 +1381,11 @@ export default function App() {
               
               <div style={{ marginTop: 40, padding: 16, border: "1px dashed #333", textAlign: "center" }}>
                 <div style={{ fontSize: "0.6rem", color: "#c8860a", letterSpacing: "0.1em", marginBottom: 8 }}>2028 PRESIDENTIAL CAMPAIGN HQ</div>
-                <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "0.9rem", color: "#e8dcc8" }}>MAKE HER HONEST AGAIN</div>
+                <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "0.9rem", color: "#e8dcc8" }}>MAKE THE AMERICAN DREAM REAL AGAIN</div>
               </div>
             </div>
           )}
     
-          {sidebarTab === "BIBLE" && (
-                
           {sidebarTab === "MANIFESTO" && (
             <div className="fade-in" style={{ padding: 20 }}>
               <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1.2rem", fontWeight: 700, color: "#8b0000", marginBottom: 4 }}>{MANIFESTO.title}</div>
@@ -1406,7 +1404,7 @@ export default function App() {
               
               <div style={{ marginTop: 40, padding: 16, border: "1px dashed #333", textAlign: "center" }}>
                 <div style={{ fontSize: "0.6rem", color: "#c8860a", letterSpacing: "0.1em", marginBottom: 8 }}>2028 PRESIDENTIAL CAMPAIGN HQ</div>
-                <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "0.9rem", color: "#e8dcc8" }}>MAKE HER HONEST AGAIN</div>
+                <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "0.9rem", color: "#e8dcc8" }}>MAKE THE AMERICAN DREAM REAL AGAIN</div>
               </div>
             </div>
           )}
