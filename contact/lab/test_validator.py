@@ -21,3 +21,5 @@ e=event("x","ACTION_VERIFIED",refs=[]); cases["action_without_post_observation"]
 e=event("x","OBJECTIVE_VERIFIED",refs=["verification_probe"]); cases["probe_laundering"]=rejected([e])
 print(json.dumps(cases,indent=2))
 raise SystemExit(not all(cases.values()))
+
+# REFLEXIVE-ADAPTATION-001 pressure: implementation identity changed; prior execution evidence must not verify this revision.
