@@ -3,6 +3,10 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *'
+  push:
+    paths:
+      - 'contact/runtime.py'
+      - '.github/workflows/contact-autonomy.yml'
 permissions:
   contents: write
 concurrency:
