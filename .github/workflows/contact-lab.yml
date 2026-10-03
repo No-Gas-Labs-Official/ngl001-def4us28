@@ -1,12 +1,20 @@
 name: CONTACT laboratory validation
 on:
   workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'contact/lab/**'
+      - 'contact/protocol/**'
+      - 'contact/epochs/**'
+      - '.github/workflows/contact-lab.yml'
   push:
     branches: [contact/three-plane-evolution]
     paths:
       - 'contact/lab/**'
       - 'contact/protocol/**'
       - 'contact/epochs/**'
+      - '.github/workflows/contact-lab.yml'
 permissions:
   contents: read
 jobs:
