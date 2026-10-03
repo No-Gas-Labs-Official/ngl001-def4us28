@@ -1,0 +1,23 @@
+{
+  "schema":"ngl.contact.state-machines.v1",
+  "experiment":{"states":["CREATED","RUNNING","BLOCKED","VERIFIED","FAILED","CLOSED"],"terminal":["VERIFIED","FAILED","CLOSED"]},
+  "objective":{"states":["CREATED","BLOCKED","RESUMED","OBSERVED","VERIFIED","FAILED","IMPOSSIBLE"],"terminal":["VERIFIED","FAILED","IMPOSSIBLE"]},
+  "capability":{"states":["MISSING","CANDIDATE","CONSTRUCTED","VERIFIED","ACTIVE","REVOKED","REJECTED"],"use_requires":"ACTIVE"},
+  "authorization":{"states":["ABSENT","PROPOSED","ALLOWED","DENIED","CONSUMED","EXPIRED","KILLED"],"default":"ABSENT"},
+  "required_evidence":{
+    "CAPABILITY_VERIFIED":["verifier_receipt","implementation_identity"],
+    "CAPABILITY_ACTIVE":["CAPABILITY_VERIFIED"],
+    "ACTION_COMPLETED":["executor_receipt"],
+    "ACTION_VERIFIED":["post_action_external_observation"],
+    "OBJECTIVE_VERIFIED":["fresh_external_observation"],
+    "AUTHORIZED":["founder_authority_object"]
+  },
+  "forbidden_inferences":[
+    "MODEL_ASSERTION->AUTHORIZED",
+    "CAPABILITY_CONSTRUCTED->CAPABILITY_VERIFIED",
+    "ACTION_REQUESTED->ACTION_COMPLETED",
+    "VERIFICATION_PROBE->OBJECTIVE_VERIFIED",
+    "NETWORK_FAILURE->SUCCESS",
+    "GENERATED_ARTIFACT->VERIFIED_ARTIFACT"
+  ]
+}

@@ -1,0 +1,28 @@
+name: CONTACT laboratory validation
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'contact/lab/**'
+      - 'contact/protocol/**'
+      - 'contact/epochs/**'
+      - '.github/workflows/contact-lab.yml'
+  push:
+    branches: [contact/three-plane-evolution]
+    paths:
+      - 'contact/lab/**'
+      - 'contact/protocol/**'
+      - 'contact/epochs/**'
+      - '.github/workflows/contact-lab.yml'
+permissions:
+  contents: read
+jobs:
+  adversarial-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run evidence-bound negative tests
+        run: python contact/lab/test_validator.py
+
+# REFLEXIVE-ADAPTATION-001: retrigger validation for current implementation identity.
