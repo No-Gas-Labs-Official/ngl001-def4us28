@@ -24,3 +24,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run evidence-bound negative tests
         run: python contact/lab/test_validator.py
+
+# REFLEXIVE-ADAPTATION-001: retrigger validation for current implementation identity.
