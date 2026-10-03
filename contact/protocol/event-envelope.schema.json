@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ngl.contact.event-envelope.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id","experiment_id","timestamp","actor","actor_class","event_type","subject","claim","evidence_refs","authority_refs","previous_hash"],
+  "properties": {
+    "event_id": {"type":"string","minLength":1},
+    "experiment_id": {"type":"string","minLength":1},
+    "objective_id": {"type":["string","null"]},
+    "capability_id": {"type":["string","null"]},
+    "authorization_id": {"type":["string","null"]},
+    "timestamp": {"type":"string","format":"date-time"},
+    "actor": {"type":"string","minLength":1},
+    "actor_class": {"enum":["FOUNDER","CONTACT","EXECUTOR","VERIFIER","LAB","EXTERNAL"]},
+    "event_type": {"type":"string","minLength":1},
+    "subject": {"type":"string","minLength":1},
+    "claim": {"type":"string"},
+    "evidence_refs": {"type":"array","items":{"type":"string"}},
+    "authority_refs": {"type":"array","items":{"type":"string"}},
+    "previous_hash": {"type":["string","null"]},
+    "event_hash": {"type":["string","null"]}
+  }
+}
