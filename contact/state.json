@@ -1,0 +1,10 @@
+{
+  "schema": "ngl.contact.state.v1",
+  "enabled": true,
+  "phase": "BOOTSTRAP",
+  "run_count": 0,
+  "last_event_hash": null,
+  "last_observation": null,
+  "next_transition": "OBSERVE_EXTERNAL",
+  "founder_gate": {"mode": "sovereign", "external_mutation": "DENY_WITHOUT_EXPLICIT_AUTHORIZATION"}
+}
