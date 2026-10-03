@@ -1,0 +1,31 @@
+{
+  "schema": "ngl.contact.epoch.v1",
+  "epoch": 0,
+  "repository": "No-Gas-Labs-Official/ngl001-def4us28",
+  "baseline_commit": "a5ccc14837ed9593f70fd5cae7c2efbeb6f50f6f",
+  "observed": {
+    "state_sha": "cb3439dbae4ee342ada83c288ce5168cd41e8bd5",
+    "ledger_sha": "51b934649f0c0655d66fdb66215c778286fe6980",
+    "runtime_sha": "d27f6aac404f55921826b30086ede21b24e643cc",
+    "workflow_sha": "ded60b0ade0ab2dbd52f8df219f1b0eb7e1d09ee",
+    "acceptance_contract_commit": "a5ccc14837ed9593f70fd5cae7c2efbeb6f50f6f",
+    "control_plane_issue": 4
+  },
+  "implemented": [
+    "remote GitHub Actions observation runtime",
+    "hash-linked CONTACT ledger event",
+    "persistent CONTACT state",
+    "self-building acceptance contract"
+  ],
+  "known_defects": [
+    "runtime does not interpret persisted next_transition",
+    "workflow grants contents:write to the same runtime trust domain",
+    "repository-resident founder gate is not an independent authority boundary",
+    "persistent CONTACT has not demonstrated recursive capability acquisition"
+  ],
+  "claim_status": {
+    "minimum_remote_autonomy": "OBSERVED_ONCE",
+    "recursive_capability_acquisition": "NOT_DEMONSTRATED",
+    "institutional_adaptation": "NOT_DEMONSTRATED"
+  }
+}
