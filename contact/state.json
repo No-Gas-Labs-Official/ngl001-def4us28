@@ -4,26 +4,26 @@
     "external_mutation": "DENY_WITHOUT_EXPLICIT_AUTHORIZATION",
     "mode": "sovereign"
   },
-  "last_event_hash": "d7ce50ce6fc764608a56d92a93262b4f6853776fe025370b66fea39f5320b279",
+  "last_event_hash": "3cefc1f8b8ead3479b2590b77125af996f719566013cfe9b0e5449231ae9dce7",
   "last_observation": {
     "actor": "contact-runtime",
     "authority": "observation",
     "claim": "GitHub repository API observation",
-    "event_hash": "d7ce50ce6fc764608a56d92a93262b4f6853776fe025370b66fea39f5320b279",
+    "event_hash": "3cefc1f8b8ead3479b2590b77125af996f719566013cfe9b0e5449231ae9dce7",
     "evidence": {
       "default_branch": "main",
       "full_name": "No-Gas-Labs-Official/ngl001-def4us28",
       "ok": true,
-      "pushed_at": "2026-11-02T05:01:31Z",
+      "pushed_at": "2026-11-02T13:24:03Z",
       "status": 200
     },
-    "previous_hash": "7c6a442b9f70dc4fbb8fcb33cb78032e7db9c61580b916c79f6a52961d3ea9bc",
+    "previous_hash": "d7ce50ce6fc764608a56d92a93262b4f6853776fe025370b66fea39f5320b279",
     "schema": "ngl.contact.event.v1",
-    "timestamp": "2026-11-02T13:24:02.959308+00:00",
+    "timestamp": "2026-11-02T22:23:57.178615+00:00",
     "type": "EXTERNAL_OBSERVATION"
   },
   "next_transition": "AWAIT_FOUNDER_OR_NEXT_STEPWIRE",
   "phase": "OBSERVED",
-  "run_count": 164,
+  "run_count": 165,
   "schema": "ngl.contact.state.v1"
 }
