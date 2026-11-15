@@ -4,26 +4,24 @@
     "external_mutation": "DENY_WITHOUT_EXPLICIT_AUTHORIZATION",
     "mode": "sovereign"
   },
-  "last_event_hash": "8445153810bc91fe1ac63bd9a9a9a9f0ab5ffbb4b4fec784f575ddb03bc4a5c5",
+  "last_event_hash": "ce829ead9f7a13c3701c89d1fbebb53e3ca1fe7a554b7f7ec0f68c2e173a8726",
   "last_observation": {
     "actor": "contact-runtime",
     "authority": "observation",
     "claim": "GitHub repository API observation",
-    "event_hash": "8445153810bc91fe1ac63bd9a9a9a9f0ab5ffbb4b4fec784f575ddb03bc4a5c5",
+    "event_hash": "ce829ead9f7a13c3701c89d1fbebb53e3ca1fe7a554b7f7ec0f68c2e173a8726",
     "evidence": {
-      "default_branch": "main",
-      "full_name": "No-Gas-Labs-Official/ngl001-def4us28",
-      "ok": true,
-      "pushed_at": "2026-11-14T16:07:56Z",
-      "status": 200
+      "error": "HTTP Error 403: rate limit exceeded",
+      "error_type": "HTTPError",
+      "ok": false
     },
-    "previous_hash": "54040b6251153338c28a87ab19ff60b909a25ade35f8761858ee08486efac275",
+    "previous_hash": "8445153810bc91fe1ac63bd9a9a9a9f0ab5ffbb4b4fec784f575ddb03bc4a5c5",
     "schema": "ngl.contact.event.v1",
-    "timestamp": "2026-11-14T20:41:47.985397+00:00",
+    "timestamp": "2026-11-15T00:21:37.422333+00:00",
     "type": "EXTERNAL_OBSERVATION"
   },
-  "next_transition": "AWAIT_FOUNDER_OR_NEXT_STEPWIRE",
-  "phase": "OBSERVED",
-  "run_count": 212,
+  "next_transition": "RETRY_OBSERVATION",
+  "phase": "OBSERVATION_FAILED",
+  "run_count": 213,
   "schema": "ngl.contact.state.v1"
 }
