@@ -4,24 +4,24 @@
     "external_mutation": "DENY_WITHOUT_EXPLICIT_AUTHORIZATION",
     "mode": "sovereign"
   },
-  "last_event_hash": "d7011d5d178ecf95997e3742487fadc46d151cb597507d437af5a273818a0085",
+  "last_event_hash": "3de69597541d6338d19a00d63dec6c3aff4e32957a6841dd95b0fa40939004bf",
   "last_observation": {
     "actor": "contact-runtime",
     "authority": "observation",
     "claim": "GitHub repository API observation",
-    "event_hash": "d7011d5d178ecf95997e3742487fadc46d151cb597507d437af5a273818a0085",
+    "event_hash": "3de69597541d6338d19a00d63dec6c3aff4e32957a6841dd95b0fa40939004bf",
     "evidence": {
       "error": "HTTP Error 403: rate limit exceeded",
       "error_type": "HTTPError",
       "ok": false
     },
-    "previous_hash": "c2f0d3bbad34f26835a5a6d44a31d3df796c2f51ded7de78b68793339da54388",
+    "previous_hash": "d7011d5d178ecf95997e3742487fadc46d151cb597507d437af5a273818a0085",
     "schema": "ngl.contact.event.v1",
-    "timestamp": "2026-11-15T19:55:32.098345+00:00",
+    "timestamp": "2026-11-15T23:49:26.913345+00:00",
     "type": "EXTERNAL_OBSERVATION"
   },
   "next_transition": "RETRY_OBSERVATION",
   "phase": "OBSERVATION_FAILED",
-  "run_count": 216,
+  "run_count": 217,
   "schema": "ngl.contact.state.v1"
 }
